@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import client from "../client";
+import client from "../../client";
 
 export default {
     Mutation: {
@@ -24,7 +24,7 @@ export default {
                         ],
                     },
                 });
-                console.log(existingUser)
+                // console.log(existingUser)
                 if(existingUser) {
                     throw new Error("This username/email is already taken.");
                 }
@@ -37,7 +37,8 @@ export default {
             } catch(e) {
                 return e;
             }
-            // save and return the user
         },
+        // save and return the user
+
     },
 };
